@@ -15,6 +15,7 @@
     "@react-three/fiber": "^9.4.0",
     "@tailwindcss/vite": "^4.1.17",
     "@tsparticles/react": "^3.0.0",
+    "camera-controls": "^2.8.3",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.24",
     "gsap": "^3.13.0",

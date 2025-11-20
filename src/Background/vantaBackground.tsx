@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Sphere, Stars } from "@react-three/drei";
 
@@ -29,6 +29,7 @@ const VantaBackground = () => {
         <ambientLight intensity={5.5} />
         <pointLight position={[10, 10, 10]} />
         <Stars radius={100} depth={50} count={5000} factor={4} fade />
+        <FloatingSphere />
       </Canvas>
     </div>
   );

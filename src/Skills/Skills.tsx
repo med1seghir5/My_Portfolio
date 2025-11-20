@@ -1,4 +1,4 @@
-import React from "react";
+
 import Tilty from "react-tilty";
 
 const logos = [

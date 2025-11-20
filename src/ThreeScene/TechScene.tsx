@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, Suspense, useState, useEffect } from "react";
+import { useLayoutEffect, useRef, Suspense, useState, useEffect } from "react";
 import { Canvas, useThree, useLoader } from "@react-three/fiber";
 import { TextureLoader, Object3D } from "three";
 import { OrbitControls } from "@react-three/drei";

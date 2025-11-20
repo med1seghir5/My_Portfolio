@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Navbar: React.FC = () => {
   return (
     <section className="hidden lg:flex flex-row justify-center items-center gap-x-12 p-4 font-semibold">

@@ -1,5 +1,5 @@
 import './Exp.css';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
 import './Exp.css';
 
