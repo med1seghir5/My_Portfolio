@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .contact-text {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
@@ -5,3 +6,12 @@
   line-height: 30px;
   text-align: center;
 }
+=======
+.contact-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 30px;
+  text-align: center;
+}
+>>>>>>> 476f160ad299c7d325babf7aed63cb2af376122b

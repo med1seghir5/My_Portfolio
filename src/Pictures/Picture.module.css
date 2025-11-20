@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
   width: 100%;
   height: 100%;
@@ -58,3 +59,65 @@
     border-radius: 14px;
   }
 }
+=======
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.deck {
+  position: absolute;
+  will-change: transform;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deck > div {
+  background-size: cover;
+  background-position: center center;
+  width: 700px; 
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  cursor: grab;
+  touch-action: none;
+}
+
+@media (max-width: 1024px) {
+  .deck > div {
+    width: 480px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .deck > div {
+    width: 360px;
+    height: 270px;
+  }
+}
+
+@media (max-width: 576px) {
+  .deck > div {
+    width: 300px;
+    height: 225px;
+  }
+}
+
+@media (max-width: 420px) {
+  .deck > div {
+    width: 350px;
+    height: 270px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .deck > div {
+    width: 220px;
+    height: 165px;
+    border-radius: 14px;
+  }
+}
+>>>>>>> 476f160ad299c7d325babf7aed63cb2af376122b
