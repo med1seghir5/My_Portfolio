@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
+@import "tailwindcss";
+.title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: 55px;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-weight: 300;
+    font-size: 80px;
+  }
+}
+
+
+.about-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: center;
+}
