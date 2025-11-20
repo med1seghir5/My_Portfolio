@@ -1,7 +1,13 @@
 import './Exp.css';
 import { useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
-import './Exp.css';
+
+// Importer les images depuis src/assets
+import Devchallenges from '../assets/Devchallenges.png';
+import ideathon from '../assets/ideathon.jpg';
+import DevfestCertificat from '../assets/DevfestCertificat.jpg';
+import stage from '../assets/stage.png';
+import gdsc from '../assets/gdsc.png';
 
 interface ExpCardData {
   title: string;
@@ -14,10 +20,10 @@ const Card: React.FC<{ data: ExpCardData }> = ({ data }) => {
   useEffect(() => {
     if (ref.current) {
       VanillaTilt.init(ref.current, {
-        max: 25,          // inclinaison maximale
-        speed: 400,       // vitesse de l'animation
-        glare: true,      // effet de lumière
-        'max-glare': 0.5, // intensité du glare
+        max: 25,
+        speed: 400,
+        glare: true,
+        'max-glare': 0.5,
       });
     }
   }, []);
@@ -52,30 +58,28 @@ const Card: React.FC<{ data: ExpCardData }> = ({ data }) => {
   );
 };
 
-// Composant principal Project
 const Exp: React.FC = () => {
   const Exps: ExpCardData[] = [
     {
       title: '1st place - DevChallenge 2024 (Frontend)',
-      image: '/src/assets/Devchallenges.png',
+      image: Devchallenges,
     },
     {
       title: '3rd place - GDGthon (ideathon) 2024',
-      image: '/src/assets/ideathon.jpg',
+      image: ideathon,
     },
     {
       title: 'Devfest 2024 Organizer',
-      image: '/src/assets/DevfestCertificat.jpg',
+      image: DevfestCertificat,
     },
     {
       title: 'Internship Certificate at Algerie Telecom',
-      image: '/src/assets/stage.png',
+      image: stage,
     },
     {
       title: 'Google Developer Student Club core team member for 2023/2024',
-      image: '/src/assets/gdsc.png',
+      image: gdsc,
     },
-    
   ];
 
   return (

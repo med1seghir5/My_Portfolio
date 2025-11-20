@@ -1,21 +1,5 @@
-import { useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Sphere, Stars } from "@react-three/drei";
-
-const FloatingSphere = () => {
-  const ref = useRef<any>(null);
-  useFrame(({ clock }) => {
-    if (ref.current) {
-      ref.current.position.y = Math.sin(clock.getElapsedTime()) * 2;
-      ref.current.rotation.y += 0.01;
-    }
-  });
-  return (
-    <Sphere ref={ref} args={[1, 32, 32]}>
-      <meshStandardMaterial color="#4fc3f7" />
-    </Sphere>
-  );
-};
+import { Canvas, } from "@react-three/fiber";
+import { Stars } from "@react-three/drei";
 
 const VantaBackground = () => {
   return (
@@ -29,7 +13,6 @@ const VantaBackground = () => {
         <ambientLight intensity={5.5} />
         <pointLight position={[10, 10, 10]} />
         <Stars radius={100} depth={50} count={5000} factor={4} fade />
-        <FloatingSphere />
       </Canvas>
     </div>
   );
