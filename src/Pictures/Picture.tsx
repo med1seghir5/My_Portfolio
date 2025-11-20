@@ -9,12 +9,11 @@ import Talk from "../assets/Talk.jpg";
 import ncs2 from "../assets/ncs2.jpg";
 import Ncs3 from "../assets/Ncs3.jpg";
 import Ncs from "../assets/ncs2.jpg";
-import gdg from "../assets/gdg.JPG";
 import ice from "../assets/ice.jpeg";
 import devfestteam from "../assets/devfestteam.jpg";
 import icebreak from "../assets/icebreak.jpeg";
 
-const cards = [ideathon1, Talk, ncs2, Ncs3, Ncs, gdg, ice, devfestteam, icebreak];
+const cards = [ideathon1, Talk, ncs2, Ncs3, Ncs, ice, devfestteam, icebreak];
 
 const to = (i: number) => ({
   x: 0,
