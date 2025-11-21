@@ -51,7 +51,7 @@ const HeroSection: React.FC = () => {
             Hi, I'm Abdelmalek Medseghir
           </h1>
 
-          <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold bg-linear-to-r from-[#5DFFFF] to-[#AE0CA7] bg-clip-text text-transparent">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold bg-linear-to-r from-[#5DFFFF] to-[#AE0CA7] bg-clip-text text-transparent">
             <Typewriter
               words={["I'm a Full-Stack MERN Developer"]}
               loop={false}
@@ -63,10 +63,8 @@ const HeroSection: React.FC = () => {
             />
           </h2>
 
-          <p className="w-full text-[17px] sm:w-[400px] md:w-[500px] lg:w-96 text-white/90 leading-relaxed">
-            A self-taught front-end developer with over 2 months of experience,
-            I build responsive and user-friendly websites & apps using clean code
-            and efficient design.
+          <p className="w-full text-lg sm:w-[400px] md:w-[500px] lg:w-96 text-white/90 leading-relaxed">
+            A self-taught web developer,I create responsive, user-friendly websites and applications, focusing on clean code and efficient, modern design.
           </p>
 
           <button className="font-medium px-4 py-2 rounded-full text-md bg-linear-to-r from-[#5DFFFF] to-[#AE0CA7] text-black shadow-md hover:shadow-lg hover:scale-105 transition hover:text-amber-50">

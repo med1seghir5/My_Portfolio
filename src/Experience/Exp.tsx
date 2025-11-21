@@ -1,8 +1,6 @@
 import './Exp.css';
 import { useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
-
-// Importer les images depuis src/assets
 import Devchallenges from '../assets/Devchallenges.png';
 import ideathon from '../assets/ideathon.jpg';
 import DevfestCertificat from '../assets/DevfestCertificat.jpg';

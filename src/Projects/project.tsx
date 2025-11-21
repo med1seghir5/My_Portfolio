@@ -86,7 +86,7 @@ const Project: React.FC = () => {
       image: fikratech,
     },
     {
-      title: "FirGuard web_app",
+      title: "FireGuard web_app",
       description:
         "This website, developed as the solution for the Hackathon (3.6 Coding), was built using Next.js and TailwindCSS to create a modern, responsive, and interactive experience.",
       image: coding36,

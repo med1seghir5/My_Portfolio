@@ -10,7 +10,7 @@ import TechScene from './ThreeScene/TechScene';
 
 function App() {
   return (
-    <div className="min-h-screen w-full text-white overflow-x-hidden relative mb-24">
+    <div className="min-h-screen w-full text-white overflow-x-hidden relative mb-14">
       <VantaBackground />
       <HeroSection />
       <AboutMe />

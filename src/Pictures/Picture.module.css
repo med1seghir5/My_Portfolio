@@ -45,8 +45,8 @@
 
 @media (max-width: 420px) {
   .deck > div {
-    width: 350px;
-    height: 270px;
+    width: 300px;
+    height: 250px;
     border-radius: 10px;
   }
 }

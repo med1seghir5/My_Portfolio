@@ -3,7 +3,6 @@ import { useSprings, animated, to as interpolate } from "@react-spring/web";
 import { useDrag } from "react-use-gesture";
 import styles from "./Picture.module.css";
 import "../About/Aboutme.css";
-
 import ideathon1 from "../assets/ideathon1.jpg";
 import Talk from "../assets/Talk.jpg";
 import ncs2 from "../assets/ncs2.jpg";
