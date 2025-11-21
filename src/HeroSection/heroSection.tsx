@@ -1,4 +1,3 @@
-import React from 'react';
 import sghyr from '../assets/sghyr.png';
 import { Typewriter } from 'react-simple-typewriter';
 
