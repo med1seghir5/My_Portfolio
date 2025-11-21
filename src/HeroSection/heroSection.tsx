@@ -67,8 +67,10 @@ const HeroSection: React.FC = () => {
             A self-taught web developer,I create responsive, user-friendly websites and applications, focusing on clean code and efficient, modern design.
           </p>
 
-          <button className="font-medium px-4 py-2 rounded-full text-md bg-linear-to-r from-[#5DFFFF] to-[#AE0CA7] text-black shadow-md hover:shadow-lg hover:scale-105 transition hover:text-amber-50">
-            <a href="/src/PDF/Mon CV.pdf" download>Download CV</a>
+          <button className="font-medium px-4 py-2 rounded-full text-md bg-gradient-to-r from-[#5DFFFF] to-[#AE0CA7] text-black shadow-md hover:shadow-lg hover:scale-105 transition hover:text-amber-50">
+            <a href="/src/PDF/Mon CV.pdf" target="_blank" rel="noopener noreferrer">
+              View CV
+            </a>
           </button>
         </div>
 
