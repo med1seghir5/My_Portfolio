@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
 
@@ -11,17 +10,3 @@
   backdrop-filter: blur(0.30000001192092896px);
 }
 
-=======
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
-
-.btn-download {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0px;
-  backdrop-filter: blur(0.30000001192092896px);
-}
-
->>>>>>> 476f160ad299c7d325babf7aed63cb2af376122b
