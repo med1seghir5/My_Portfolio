@@ -10,7 +10,7 @@ import ncs2 from "../assets/ncs2.jpg";
 import Ncs3 from "../assets/Ncs3.jpg";
 import Ncs from "../assets/ncs2.jpg";
 import ice from "../assets/ice.jpeg";
-import devfestteam from "../assets/devfest23.png";
+import devfestteam from "../assets/devfest2k23.jpg";
 import icebreak from "../assets/icebreak.jpeg";
 
 const cards = [ideathon1, Talk, ncs2, Ncs3, Ncs, ice, devfestteam, icebreak];
