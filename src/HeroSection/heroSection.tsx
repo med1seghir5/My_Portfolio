@@ -68,7 +68,7 @@ const HeroSection: React.FC = () => {
           </p>
 
           <button className="font-medium px-4 py-2 rounded-full text-md bg-linear-to-r from-[#5DFFFF] to-[#AE0CA7] text-black shadow-md hover:shadow-lg hover:scale-105 transition hover:text-amber-50">
-            <a href="/PDF/CV(1).pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/PDF/cv (7).pdf" target="_blank" rel="noopener noreferrer">
               View CV
             </a>
           </button>
