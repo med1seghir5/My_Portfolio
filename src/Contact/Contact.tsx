@@ -8,74 +8,91 @@ const Contact: React.FC = () => {
   const phone = "+213675915448";
 
   return (
-   <div id="contact" className="flex flex-col justify-center items-center p-5 sm:p-10 mt-24 sm:mt-48 gap-10 font-['Josefin_Sans']">
-      <h1 className="title text-3xl sm:text-4xl md:text-5xl font-bold bg-linear-to-r from-[#5DFFFF] via-[#8A7FF0] to-[#AE0CA7] bg-clip-text text-transparent text-center">
+    <div id="contact" className="flex flex-col justify-center items-center p-5 sm:p-10 mt-32 gap-10 relative z-10 w-full max-w-7xl mx-auto mb-20 whitespace-normal">
+      <h1 className="font-['Josefin_Sans'] text-4xl sm:text-5xl lg:text-6xl font-bold text-center text-gradient">
         Contact Me
       </h1>
           <motion.div
-            className="contact-text flex flex-col md:flex-row justify-center items-center gap-8 md:gap-10 w-full max-w-4xl"
+            className="contact-text flex flex-col md:flex-row justify-center items-center gap-12 lg:gap-24 w-full max-w-5xl"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-
-            <div className="flex flex-col gap-6 items-center md:items-start text-white w-full max-w-sm md:max-w-none font-['Josefin_Sans']">
+            <div className="flex flex-col gap-6 items-center md:items-start text-white/80 w-full md:w-1/2 font-['Josefin_Sans'] glass-panel p-8 rounded-3xl group relative overflow-hidden">
+             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
           <a
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 hover:text-[#8A7FF0] transition-colors text-sm sm:text-base md:text-base"
+            className="flex items-center gap-4 hover:text-white transition-colors text-base sm:text-lg w-full p-4 rounded-xl hover:bg-white/5 relative z-10"
           >
-            <FaGithub size={32} /> GitHub
+            <div className="p-3 glass-panel rounded-full text-[#a855f7]"><FaGithub size={24} /></div>
+            <span className="font-medium tracking-wide">GitHub</span>
           </a>
 
           <a
             href={linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 hover:text-[#8A7FF0] transition-colors text-sm sm:text-base md:text-base"
+            className="flex items-center gap-4 hover:text-white transition-colors text-base sm:text-lg w-full p-4 rounded-xl hover:bg-white/5 relative z-10"
           >
-            <FaLinkedin size={32} /> LinkedIn
+            <div className="p-3 glass-panel rounded-full text-[#06b6d4]"><FaLinkedin size={24} /></div>
+            <span className="font-medium tracking-wide">LinkedIn</span>
           </a>
 
           <a
             href={`mailto:${email}`}
-            className="flex items-center gap-3 hover:text-[#8A7FF0] transition-colors break-words text-sm sm:text-base md:text-base"
+            className="flex items-center gap-4 hover:text-white transition-colors text-base sm:text-lg w-full p-4 rounded-xl hover:bg-white/5 relative z-10"
           >
-            <FaEnvelope size={32} /> {email}
+            <div className="p-3 glass-panel rounded-full text-[#f472b6]"><FaEnvelope size={24} /></div>
+            <span className="break-all font-medium tracking-wide">{email}</span>
           </a>
 
           <a
             href={`tel:${phone}`}
-            className="flex items-center gap-3 hover:text-[#8A7FF0] transition-colors break-words text-sm sm:text-base md:text-base"
+            className="flex items-center gap-4 hover:text-white transition-colors text-base sm:text-lg w-full p-4 rounded-xl hover:bg-white/5 relative z-10"
           >
-            <FaPhone size={32} /> {phone}
+            <div className="p-3 glass-panel rounded-full text-[#9333ea]"><FaPhone size={24} /></div>
+            <span className="font-medium tracking-wide">{phone}</span>
           </a>
         </div>
 
         <motion.form
-          className="flex flex-col gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg w-full max-w-md"
+          className="flex flex-col gap-6 glass-panel p-8 rounded-3xl w-full md:w-1/2 relative"
           onSubmit={(e) => e.preventDefault()}
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.01 }}
         >
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="p-3 rounded-lg bg-white/20 backdrop-blur-sm text-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8A7FF0]"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="p-3 rounded-lg bg-white/20 backdrop-blur-sm text-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8A7FF0]"
-          />
-          <textarea
-            placeholder="Your Message"
-            rows={4}
-            className="p-3 rounded-lg bg-white/20 backdrop-blur-sm text-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#8A7FF0] resize-none"
-          />
+          <div className="flex flex-col gap-2">
+            <label className="text-sm text-white/50 font-semibold tracking-widest uppercase pl-2">Name</label>
+            <input
+              type="text"
+              placeholder="John Doe"
+              className="p-4 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-[#9333ea] focus:border-transparent transition-all placeholder:text-white/20"
+            />
+          </div>
+          
+          <div className="flex flex-col gap-2">
+            <label className="text-sm text-white/50 font-semibold tracking-widest uppercase pl-2">Email</label>
+            <input
+              type="email"
+              placeholder="john@example.com"
+              className="p-4 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-[#9333ea] focus:border-transparent transition-all placeholder:text-white/20"
+            />
+          </div>
+          
+          <div className="flex flex-col gap-2">
+            <label className="text-sm text-white/50 font-semibold tracking-widest uppercase pl-2">Message</label>
+            <textarea
+              placeholder="Hello..."
+              rows={4}
+              className="p-4 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-[#9333ea] focus:border-transparent transition-all placeholder:text-white/20 resize-none"
+            />
+          </div>
+          
           <button
             type="submit"
-            className="bg-linear-to-r from-[#5DFFFF] via-[#8A7FF0] to-[#AE0CA7] py-3 rounded-lg text-white font-bold hover:scale-105 transition-transform"
+            className="btn-primary py-4 rounded-xl font-bold tracking-widest uppercase mt-2 text-sm"
           >
             Send Message
           </button>

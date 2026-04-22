@@ -1,6 +1,5 @@
 import './Exp.css';
-import { useEffect, useRef } from 'react';
-import VanillaTilt from 'vanilla-tilt';
+// No additional imports needed
 import Devchallenges from '../assets/Devchallenges.png';
 import ideathon from '../assets/ideathon.jpg';
 import DevfestCertificat from '../assets/DevfestCertificat.jpg';
@@ -12,51 +11,50 @@ interface ExpCardData {
   image: string;
 }
 
-const Card: React.FC<{ data: ExpCardData }> = ({ data }) => {
-  const ref = useRef<HTMLDivElement>(null);
+import { motion } from "framer-motion";
 
-  useEffect(() => {
-    if (ref.current) {
-      VanillaTilt.init(ref.current, {
-        max: 25,
-        speed: 400,
-        glare: true,
-        'max-glare': 0.5,
-      });
-    }
-  }, []);
-
+const Card: React.FC<{ data: ExpCardData; variants: any }> = ({ data, variants }) => {
   return (
-    <div
-      ref={ref}
-      className="project-card text-center"
+    <motion.div
+      variants={variants}
+      className="project-card glass-panel group relative flex flex-col overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_10px_30px_rgba(168,85,247,0.3)]"
       style={{
-        width: 300,
-        height: 300,
-        borderRadius: 20,
-        boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
-        background: '#ffff',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
+        width: 320,
+        height: 350,
+        borderRadius: 24,
         cursor: 'pointer',
+        background: "rgba(255, 255, 255, 0.03)",
       }}
     >
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 pointer-events-none"></div>
       <img
         src={data.image}
         alt={data.title}
-        style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+        className="w-full h-[220px] object-cover mix-blend-overlay group-hover:mix-blend-normal transition-all duration-500 group-hover:scale-110"
       />
-      <div style={{ padding: '15px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-        <h2 style={{ fontSize: '1.3rem', fontWeight: 'bold', marginBottom: '10px', color: '#333' }}>
+      <div className="p-6 flex flex-col flex-1 relative z-20 bg-gradient-to-t from-[#050505] to-transparent h-full justify-center">
+        <h2 className="text-lg font-bold mb-3 text-white/90 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-colors text-center leading-snug">
           {data.title}
         </h2>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const Exp: React.FC = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { staggerChildren: 0.15 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
+
   const Exps: ExpCardData[] = [
     {
       title: '1st place - DevChallenge 2024 (Frontend)',
@@ -81,16 +79,27 @@ const Exp: React.FC = () => {
   ];
 
   return (
-    <div id='Exp' className="flex flex-col justify-center items-center gap-y-14 p-10 mt-48">
-      <h1 className="font-['Josefin_Sans'] text-[50px] sm:text-4xl md:text-5xl lg:text-[70px] font-bold sm:font-light text-center
-        bg-linear-to-r from-[#5DFFFF] via-[#8A7FF0] to-[#AE0CA7] bg-clip-text text-transparent">
+    <div id='Exp' className="flex flex-col justify-center items-center gap-y-14 p-10 mt-32 relative z-10 w-full max-w-7xl mx-auto">
+      <motion.h1 
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="font-['Josefin_Sans'] text-4xl sm:text-5xl lg:text-6xl font-bold text-center text-gradient"
+      >
         Experience & Achievements
-      </h1>
-      <div className="flex flex-wrap justify-center gap-10">
+      </motion.h1>
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="flex flex-wrap justify-center gap-10"
+      >
         {Exps.map((proj, index) => (
-          <Card key={index} data={proj} />
+          <Card key={index} data={proj} variants={itemVariants} />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

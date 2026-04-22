@@ -2,8 +2,7 @@ import { useLayoutEffect, useRef, Suspense, useState, useEffect } from "react";
 import { Canvas, useThree, useLoader } from "@react-three/fiber";
 import { TextureLoader, Object3D } from "three";
 import { OrbitControls } from "@react-three/drei";
-import { degreesToRadians } from "popmotion";
-
+const degreesToRadians = (degrees: number) => degrees * (Math.PI / 180);
 const color = "#ffffff";
 
 const Icosahedron: React.FC = () => (
@@ -42,7 +41,7 @@ function Scene({ num = 50, logoSizeMultiplier = 1 }: { num?: number; logoSizeMul
     'https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg',
     'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
     'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/926px-C_Programming_Language.svg.png',
+    'https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg',
   ];
 
   const items: React.ReactNode[] = [];
@@ -90,7 +89,7 @@ export default function TechScene() {
   }
 
   return (
-    <div style={{ height: canvasHeight }} className="sm:mx-10 mt-48 sm:mt-48">
+    <div style={{ height: canvasHeight }} className="w-full relative z-10 mt-32 max-w-7xl mx-auto overflow-hidden">
       <Canvas camera={{ position: cameraPosition, fov: 50 }}>
         <Suspense fallback={null}>
           <Scene num={50} logoSizeMultiplier={logoSizeMultiplier} />

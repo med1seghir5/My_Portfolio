@@ -6,7 +6,7 @@ const VantaBackground = () => {
     <div
       className="fixed inset-0 -z-50"
       style={{
-        background: "linear-gradient(62deg, #100425 0%, #100425 100%)",
+        background: "radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)",
       }}
     >
       <Canvas camera={{ position: [0, 0, 10] }}>

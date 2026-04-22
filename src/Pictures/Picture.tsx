@@ -68,9 +68,9 @@ export default function Deck() {
   return (
     <div
       id="Memories"
-      className="flex flex-col justify-center items-center overflow-hidden pb-40 mt-32 md:pb-56 md:mt-48"
+      className="flex flex-col justify-center items-center overflow-hidden pb-40 mt-32 md:pb-56 relative z-10 w-full max-w-7xl mx-auto"
     >
-      <h1 className="title bg-linear-to-r from-[#5DFFFF] via-[#8A7FF0] to-[#AE0CA7] bg-clip-text text-transparent text-center">
+      <h1 className="font-['Josefin_Sans'] text-4xl sm:text-5xl lg:text-6xl font-bold text-center text-gradient">
         Memories
       </h1>
 
